@@ -1,0 +1,5 @@
+archer_meet_entry:
+    resource: "@ArcherMeetEntryBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
