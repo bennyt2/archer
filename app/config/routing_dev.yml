@@ -12,7 +12,7 @@ _configurator:
 
 _main:
     resource: routing.yml
-
-# AcmeDemoBundle routes (to be removed)
-_acme_demo:
+    
+_archer_meet_entry_bundle:
     resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+
