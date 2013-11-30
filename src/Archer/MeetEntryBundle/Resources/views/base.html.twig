@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="header">
+          <div class="container">
+            <h1 class='text-center'><a href="{{ path('_homepage') }}">Archer Meet Entries</a></h1>
+          </div>
+        </div>
+        <div id="content">
+             <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Competition list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Start_date</th>
+                <th>End_date</th>
+                <th>Registration_start_date</th>
+                <th>Registration_end_date</th>
+                <th>Registration_code</th>
+                <th>Notes</th>
+                <th>Events_per_athlete</th>
+                <th>Male_entries_allowed</th>
+                <th>Female_entries_allowed</th>
+                <th>Athletes_per_event</th>
+                <th>Relays_per_event</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('competition_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.location }}</td>
+                <td>{% if entity.startdate %}{{ entity.startdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.enddate %}{{ entity.enddate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.registrationstartdate %}{{ entity.registrationstartdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.registrationenddate %}{{ entity.registrationenddate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.registrationcode }}</td>
+                <td>{{ entity.notes }}</td>
+                <td>{{ entity.eventsperathlete }}</td>
+                <td>{{ entity.maleentriesallowed }}</td>
+                <td>{{ entity.femaleentriesallowed }}</td>
+                <td>{{ entity.athletesperevent }}</td>
+                <td>{{ entity.relaysperevent }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('competition_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('competition_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('competition_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

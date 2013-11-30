@@ -1,0 +1,16 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+{% form_theme form 'ArcherMeetEntryBundle:Form:fields.html.twig' %}
+
+{% block body -%}
+    <h1>Athlete creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('athlete') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>CompetitionType creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('competitiontype') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

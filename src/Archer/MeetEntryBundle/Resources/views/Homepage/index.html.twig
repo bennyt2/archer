@@ -1,0 +1,16 @@
+{# index.html.twig #}
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="list-group">
+  <a href="{{ path('affiliation') }}" class="list-group-item">Affiliation</a>
+  <a href="{{ path('affiliationtype') }}" class="list-group-item">Affiliation Type</a>
+  <a href="{{ path('athlete') }}" class="list-group-item">Athlete</a>
+  <a href="{{ path('competition') }}" class="list-group-item">Competition</a>
+  <a href="{{ path('competitionevent') }}" class="list-group-item">Competition Event</a>
+  <a href="{{ path('competitiontype') }}" class="list-group-item">Competition Type</a>
+  <a href="{{ path('entry') }}" class="list-group-item">Entry</a>
+  <a href="{{ path('event') }}" class="list-group-item">Event</a>
+  <a href="{{ path('eventtype') }}" class="list-group-item">Event Type</a>
+</div>
+{% endblock %}

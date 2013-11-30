@@ -1,0 +1,23 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Athlete Import File</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Path</th>
+                <td>{{ entity.path }}</td>
+            </tr>
+            <tr>
+                <th>Affiliation</th>
+                <td>{{ entity.affiliation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

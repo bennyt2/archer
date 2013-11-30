@@ -1,0 +1,32 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+
+  <div class="row">
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3 class="panel-title">Select an Event</h3></div>
+        <ul class="nav nav-pills">
+          <li><a href="#home" data-toggle="tab">100m Run</a></li>
+          <li><a href="#profile" data-toggle="tab">200m Dash</a></li>
+          <li><a href="#messages" data-toggle="tab">400m Dash</a></li>
+          <li><a href="#settings" data-toggle="tab">800m Dash</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="row">
+        <div class="col-md-8"><p class="h4">Athlete</p></div>
+        <div class="col-md-4"><p class="h4">Seed</p></div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group"><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+        </div>
+        <div class="col-md-4">
+          <div class="form-group"><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

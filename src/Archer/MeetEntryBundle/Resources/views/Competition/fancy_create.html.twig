@@ -1,0 +1,177 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+  <style type="text/css">
+    div.competition-event-options {
+      display:none;
+    }
+  </style>
+  <div class="row">
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3 class="panel-title">Pre-populate Events</h3></div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-default btn-block">Cross Country</button>
+            <button type="button" class="btn btn-default btn-block">Indoor Track</button>
+            <button type="button" class="btn btn-default btn-block">Outdoor Track</button>
+        </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3 class="panel-title">Find an Event to Add</h3></div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input type="email" class="form-control" id="findevent" placeholder="Type the event distance...">
+          </div>
+          <div class="row">
+            <ul class="list-group" id="events-to-add">
+              <li class="list-group-item">
+                <a href="javascript:none();" class="list-group-item">
+                  <span class="badge"><span class="glyphicon glyphicon-plus"></span></span>
+                  Shotput
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="panel panel-primary">
+      <div class="panel-heading"><h3 class="panel-title">Enter Fields</h3></div>
+        <div class="panel-body">
+          <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Name</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+          <div class="form-group">
+            <label for="archer_meetentrybundle_athlete_gender">Type</label>
+            <select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
+              <option value=""></option>
+              <option value="1">Cross Country</option>
+              <option value="2">Indoor Track</option>
+              <option value="3">Outdoor Track</option>
+            </select>
+          </div>   
+
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="row">
+                <div class="col-xs-12 hidden-md hidden-lg">
+                  <div class="form-group">
+                    <label for="archer_meetentrybundle_athlete_gender">Type</label>
+                    <select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
+                      <option value="">Select an Event to Add</option>
+                      <option value="4">800m Run</option>
+                      <option value="5">1600m Run</option>
+                      <option value="6">3200m Run</option>
+                    </select>
+                  </div>   
+                </div>
+              </div>
+              <div class="row competition-event" id="competition-event-1">
+                <div class="col-xs-8 col-sm-10"><p>100m Dash</p></div>
+                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+              </div>
+              <div class="row competition-event-options" id="competition-event-options-1">
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+              </div>
+              <div class="row competition-event" id="competition-event-2">
+                <div class="col-xs-8 col-sm-10"><p>200m Dash</p></div>
+                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+              </div>
+              <div class="row competition-event-options" id="competition-event-options-2">
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+              </div>
+              <div class="row competition-event" id="competition-event-3">
+                <div class="col-xs-8 col-sm-10"><p>400m Dash</p></div>
+                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+              </div>
+              <div class="row competition-event-options" id="competition-event-options-3">
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".competition-event-option-select").click(function() {
+        var id = archer_retrieveIntegerIdFromClass($(this).parent().attr("id"));
+        var $optionsclass = $("#competition-event-options-"+id);
+        archer_toggleClass($optionsclass);
+        archer_chevronChange($(this).children().children());
+      });
+      
+      var events_json = '{"4":"800m Run", "5":"1600m Run", "6":"3200m Run"}';
+      var events_obj = JSON.parse(events_json);
+      
+      $("input#findevent").on("keyup", function(e) {
+        var searchvalue = $(this).val();
+        if (searchvalue.length >= 1) {
+          var arr = [];
+          $.each(events_obj, function(key, value) {
+            if (value.indexOf(searchvalue) !== -1) {
+              console.log(value);
+              arr.push(key);
+            }
+          });
+          var $list = $("ul#events-to-add");
+          $list.empty();
+          for(i=0; i<arr.length; i++) {
+            $list.append('<li class="list-group-item"><a href="javascript:archer_addEvent('+arr[i]+');" class="list-group-item"><span class="badge"><span class="glyphicon glyphicon-plus"></span></span>'+events_obj[arr[i]]+'</a></li>');
+          }
+          //console.log(arr);
+          
+        }
+      });
+      
+      //console.log(events_obj);
+
+    });
+    
+    function archer_retrieveIntegerIdFromClass(theclass) {
+      var id = theclass.split("-");
+      return id[id.length-1];
+    }
+    
+    function archer_toggleClass($entity) {
+      if ($entity.css("display") == "block") {
+        $entity.css({"display": "none"});
+      } else if ($entity.css("display") == "none") {
+        $entity.css({"display": "block"});
+      }
+    }
+    function archer_chevronChange($entity) {
+      if ($entity.hasClass("glyphicon-chevron-down")) {
+        $entity.removeClass("glyphicon-chevron-down");
+        $entity.addClass("glyphicon-chevron-up");
+      } else if ($entity.hasClass("glyphicon-chevron-up")) {
+        $entity.removeClass("glyphicon-chevron-up");
+        $entity.addClass("glyphicon-chevron-down");
+      }
+    }
+  </script>
+
+{% endblock %}

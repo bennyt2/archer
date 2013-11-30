@@ -1,0 +1,80 @@
+{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Competition</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ entity.location }}</td>
+            </tr>
+            <tr>
+                <th>Start_date</th>
+                <td>{{ entity.startdate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>End_date</th>
+                <td>{{ entity.enddate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Registration_start_date</th>
+                <td>{{ entity.registrationstartdate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Registration_end_date</th>
+                <td>{{ entity.registrationenddate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Registration_code</th>
+                <td>{{ entity.registrationcode }}</td>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td>{{ entity.notes }}</td>
+            </tr>
+            <tr>
+                <th>Events_per_athlete</th>
+                <td>{{ entity.eventsperathlete }}</td>
+            </tr>
+            <tr>
+                <th>Male_entries_allowed</th>
+                <td>{{ entity.maleentriesallowed }}</td>
+            </tr>
+            <tr>
+                <th>Female_entries_allowed</th>
+                <td>{{ entity.femaleentriesallowed }}</td>
+            </tr>
+            <tr>
+                <th>Athletes_per_event</th>
+                <td>{{ entity.athletesperevent }}</td>
+            </tr>
+            <tr>
+                <th>Relays_per_event</th>
+                <td>{{ entity.relaysperevent }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('competition') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('competition_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
