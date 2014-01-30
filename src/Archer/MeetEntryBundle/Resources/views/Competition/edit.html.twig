@@ -1,16 +1,49 @@
-{% extends 'ArcherMeetEntryBundle::layout.html.twig' %}
+{% extends 'ArcherMeetEntryBundle::layout-2col.html.twig' %}
+{% form_theme edit_form 'ArcherMeetEntryBundle:Form:fields.html.twig' %}
 
-{% block body -%}
-    <h1>Competition edit</h1>
+{% block pagetitle %}
+Edit Competition
+{% endblock %}
 
-    {{ form(edit_form) }}
+{% block sidebar %}
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#info" data-toggle="tab">Information</a></li>
+    <li><a href="#events" data-toggle="tab">Manage Events</a></li>
+    <li><a href="#teams" data-toggle="tab">Teams</a></li>
+    <li><a href="#entries" data-toggle="tab">Entries</a></li>
+  </ul>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('competition') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+{% endblock %}
+{% block body %}
+    <div class="tab-content">
+      <div class="panel panel-primary active tab-pane" id="info">
+      <div class="panel-heading"><h3 class="panel-title">Competition Information</h3></div>
+        <div class="panel-body">
+          {{ form(edit_form) }}
+        </div>
+      </div>
+      <div class="panel panel-primary tab-pane" id="events">
+      <div class="panel-heading"><h3 class="panel-title">Manage Events</h3></div>
+        <div class="panel-body">
+          {# Allow addition of events #}
+          
+        
+          {# Show events that have already been added #}
+        </div>
+      </div>
+      <div class="panel panel-primary tab-pane" id="teams">
+      <div class="panel-heading"><h3 class="panel-title">Entered Teams</h3></div>
+        <div class="panel-body">
+          {# Show all teams #}
+        </div>
+      </div>
+      <div class="panel panel-primary tab-pane" id="entries">
+      <div class="panel-heading"><h3 class="panel-title">View Entries</h3></div>
+        <div class="panel-body">
+          {# Show all entries #}
+        </div>
+      </div>
+    </div>
+      
+
 {% endblock %}

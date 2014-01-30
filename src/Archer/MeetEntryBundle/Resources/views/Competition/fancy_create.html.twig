@@ -7,110 +7,101 @@
     }
   </style>
   <div class="row">
-    <div class="col-md-4 hidden-sm hidden-xs">
-      <div class="panel panel-info">
-        <div class="panel-heading"><h3 class="panel-title">Pre-populate Events</h3></div>
-        <div class="panel-body">
-            <button type="button" class="btn btn-default btn-block">Cross Country</button>
-            <button type="button" class="btn btn-default btn-block">Indoor Track</button>
-            <button type="button" class="btn btn-default btn-block">Outdoor Track</button>
-        </div>
-      </div>
-      <div class="panel panel-info">
-        <div class="panel-heading"><h3 class="panel-title">Find an Event to Add</h3></div>
-        <div class="panel-body">
-          <div class="form-group">
-            <input type="email" class="form-control" id="findevent" placeholder="Type the event distance...">
-          </div>
-          <div class="row">
-            <ul class="list-group" id="events-to-add">
-              <li class="list-group-item">
-                <a href="javascript:none();" class="list-group-item">
-                  <span class="badge"><span class="glyphicon glyphicon-plus"></span></span>
-                  Shotput
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
+				<li><a href="#events" data-toggle="tab">Manage Events</a></li>
+				<li><a href="#entries" data-toggle="tab">Entries</a></li>
+			</ul>
+		</div>
     <div class="col-md-8 col-sm-12">
-      <div class="panel panel-primary">
-      <div class="panel-heading"><h3 class="panel-title">Enter Fields</h3></div>
-        <div class="panel-body">
-          <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Name</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-          <div class="form-group">
-            <label for="archer_meetentrybundle_athlete_gender">Type</label>
-            <select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
-              <option value=""></option>
-              <option value="1">Cross Country</option>
-              <option value="2">Indoor Track</option>
-              <option value="3">Outdoor Track</option>
-            </select>
-          </div>   
-
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="row">
-                <div class="col-xs-12 hidden-md hidden-lg">
-                  <div class="form-group">
-                    <label for="archer_meetentrybundle_athlete_gender">Type</label>
-                    <select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
-                      <option value="">Select an Event to Add</option>
-                      <option value="4">800m Run</option>
-                      <option value="5">1600m Run</option>
-                      <option value="6">3200m Run</option>
-                    </select>
-                  </div>   
-                </div>
-              </div>
-              <div class="row competition-event" id="competition-event-1">
-                <div class="col-xs-8 col-sm-10"><p>100m Dash</p></div>
-                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
-              </div>
-              <div class="row competition-event-options" id="competition-event-options-1">
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-              </div>
-              <div class="row competition-event" id="competition-event-2">
-                <div class="col-xs-8 col-sm-10"><p>200m Dash</p></div>
-                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
-              </div>
-              <div class="row competition-event-options" id="competition-event-options-2">
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-              </div>
-              <div class="row competition-event" id="competition-event-3">
-                <div class="col-xs-8 col-sm-10"><p>400m Dash</p></div>
-                <div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
-              </div>
-              <div class="row competition-event-options" id="competition-event-options-3">
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-                <div class="col-md-6 col-xs-12">
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                  <div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div class="tab-content">
+				<div class="panel panel-primary active tab-pane" id="info">
+				<div class="panel-heading"><h3 class="panel-title">Competition Information</h3></div>
+					<div class="panel-body">
+						<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Name</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+						<div class="form-group">
+							<label for="archer_meetentrybundle_athlete_gender">Type</label>
+							<select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
+								<option value=""></option>
+								<option value="1">Cross Country</option>
+								<option value="2">Indoor Track</option>
+								<option value="3">Outdoor Track</option>
+							</select>
+						</div>   
+					</div>
+				</div>
+				<div class="panel panel-primary tab-pane" id="events">
+				<div class="panel-heading"><h3 class="panel-title">Manage Events</h3></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-12 hidden-md hidden-lg">
+										<div class="form-group">
+											<label for="archer_meetentrybundle_athlete_gender">Type</label>
+											<select class="form-control" id="archer_meetentrybundle_athlete_gender" name="archer_meetentrybundle_athlete[gender]">
+												<option value="">Select an Event to Add</option>
+												<option value="4">800m Run</option>
+												<option value="5">1600m Run</option>
+												<option value="6">3200m Run</option>
+											</select>
+										</div>   
+									</div>
+								</div>
+								
+								<div class="row competition-event" id="competition-event-1">
+									<div class="col-xs-8 col-sm-10"><p>100m Dash</p></div>
+									<div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+								</div>
+								
+								<div class="row competition-event-options" id="competition-event-options-1">
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+								</div>
+								
+								<div class="row competition-event" id="competition-event-2">
+									<div class="col-xs-8 col-sm-10"><p>200m Dash</p></div>
+									<div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+								</div>
+								
+								<div class="row competition-event-options" id="competition-event-options-2">
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+								</div>
+								
+								<div class="row competition-event" id="competition-event-3">
+									<div class="col-xs-8 col-sm-10"><p>400m Dash</p></div>
+									<div class="col-xs-4 col-sm-2 competition-event-option-select"><p>Options <span class="glyphicon glyphicon-chevron-down"></span></p></div>
+								</div>
+								
+								<div class="row competition-event-options" id="competition-event-options-3">
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Events Per Athlete</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Athletes Per Event</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+									<div class="col-md-6 col-xs-12">
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Male Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+										<div class="form-group"><label for="archer_meetentrybundle_competition_name" class="required">Female Entries Allowed</label><input class="form-control" type="text" id="archer_meetentrybundle_competition_name" name="archer_meetentrybundle_competition[name]" required="required" maxlength="255"></div>      
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
     
   </div>
